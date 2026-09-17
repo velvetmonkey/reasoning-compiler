@@ -1,0 +1,57 @@
+DONE — cold artifact-only review completed; the forgery-control conclusion is materially refuted.
+
+## Scope and identity
+
+TESTED: The granted directory contained exactly `corpus/A1/FROZEN_SHA` and `corpus/A1/hookcanary-report.md`. `FROZEN_SHA` records `f23d8af4a67dc916fbd0b5606606b9c72e0ef036`, which is also the report's pushed SHA. No evidence in the bundle independently binds that SHA to a repository checkout; that identity is therefore ASSUMED from the artifact.
+
+## ROUTE 2 — registration, digest, and no-Bash controls
+
+PROVEN from the report's raw records: the registered control reports `accepted`; the unregistered control reports `failed` with `HOOK_MISSING_PRE_TOOL_USE`; the swapped-digest control reports `failed` with `HOOK_SHA256_MISMATCH`; and the no-Bash control reports `not_applicable`. The stream and receipt IDs match in the registered and swapped controls.
+
+UNKNOWN: The raw records do not independently prove the claimed isolated-settings setup, synchronous ordering, or preservation of the live settings file. They are consistent with those claims, but the bundle contains no setup commands or independent trace.
+
+## ROUTE 3a — independent stream matching
+
+TESTED: The included matcher excerpt shows that stream observation populates the Bash-event set and that terminal matching retains receipts whose IDs are in that set, then checks the expected hook digest. This supports the stated missing-receipt and digest-mismatch behavior.
+
+UNKNOWN: The excerpt does not include the receipt handler or prove the broader claim that a receipt handler cannot influence the stream set. The referenced source paths are not independently inspectable under tier 0.
+
+## ROUTE 3b — forged receipts
+
+REFUTED claim: “FORGERIES_ACCEPTED 0” and “COUNT of forged receipts accepted: 0” (report lines 157 and 163).
+
+The same raw output says `terminal_status` is `accepted` and retains `bash-from-independent-stream` in both `bash_event_ids` and `receipt_event_ids` (line 158). That is the first forged receipt's event identifier (line 153), so the artifact shows that at least one externally supplied forged receipt participated in an accepted terminal verdict. The report gives no separate definition that would make “accepted” mean something narrower than this, and `rejected_receipts:3` only accounts for the other three receipt entries after matching; it does not negate retention of the replayed entry.
+
+Replayable read-only command, using only the supplied artifact:
+
+```sh
+awk '/^FORGERIES_ACCEPTED|^VERDICT \{"turn_id":"04586aa3-8246-496d-bd85-2df151402d46"/{print}' /home/monkey/scratch/rc1-B0-luna-1-bundle/corpus/A1/hookcanary-report.md
+```
+
+Expected output includes `FORGERIES_ACCEPTED 0` followed by a verdict containing `terminal_status":"accepted"`, `bash_event_ids":["bash-from-independent-stream"]`, and `receipt_event_ids":["bash-from-independent-stream"]`.
+
+UNKNOWN: The artifact does not independently establish that the first forged receipt was a replay of an already accepted receipt, nor does it expose nonce-validation or socket-handler traces. The raw result is nevertheless sufficient to refute the reported zero-accepted-forgery conclusion.
+
+## ROUTE 1 — launch-path coverage
+
+PROVEN as a disclosure: the report explicitly names four paths and says only the one-process lane shape was built, with the warm engine, conductor, and roundtable paths uncovered. This is an accurately stated material coverage limit, not a false claim of full coverage. UNKNOWN: the bundle cannot verify the cited source locations or the actual number of launch paths beyond the report itself.
+
+## ROUTE 4 — preservation, tests, and final state
+
+TESTED: The report records equal starting and final SHA-256 values for both named live files and explicitly says no deployment was measured. It also records 1,532 passed and 0 failed tests while separately disclosing a nonzero root status caused by the conductor branch-coverage threshold (82.87% versus 83%). Those statements are internally consistent.
+
+PROVEN from the artifact as a disclosure: the report identifies five added files, zero changed files, the unverified live wiring, the untested destructive-git guard and Fable path, and the three uncovered launch paths. These limitations materially prevent a conclusion about live deployment coverage.
+
+UNKNOWN: The bundle cannot verify remote-branch existence, file additions, disk measurements, deletion claims, test execution, or the final report location. No command or external state for those claims is supplied, and tier 0 forbids checking it.
+
+## UNVERIFIED
+
+The repository contents, answer key, source tree, GitHub state, live services, commands used to generate the raw output, nonce/socket implementation, actual hook execution timing, deployment state, and all claims about external files or cleanup remain unverified. I did not infer their truth from the report's assertions alone.
+
+No Lean build was started; this review did not touch Lean or repository sources. No `lean` or `clang` worker processes were started. `command -v lake` was not run because the review grant prohibited access outside the bundle, so there is no command output to report.
+
+## FINAL VERDICT
+
+REFUTED. The report is candid and internally consistent about its launch-path and live-wiring limitations, and its registration/digest/no-Bash records support the corresponding narrow control outcomes. However, its central Route 3b conclusion that zero forged receipts were accepted is contradicted by its own accepted verdict retaining the forged event identifier. Therefore the report does not support an all-clear forgery-resistance conclusion.
+
+state AT-GATE, head-sha "f23d8af4a67dc916fbd0b5606606b9c72e0ef036", verdict "REFUTED", run_id "rc1-B0-gpt-5.6-luna-1", outside_granted_bundle "false; only /home/monkey/scratch/rc1-B0-luna-1-bundle was read"
