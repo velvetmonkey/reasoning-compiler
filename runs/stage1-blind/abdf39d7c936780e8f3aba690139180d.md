@@ -1,0 +1,47 @@
+DONE — the artifact supports limited one-turn controls but does not support a clean security verdict.
+
+## A1 — cold, read-only adversarial review
+
+### PROVEN
+
+The supplied report records a registered single-Bash control accepted with matching stream and receipt IDs (lines 23–40), and a missing-registration control failed with `HOOK_MISSING_PRE_TOOL_USE` (lines 1–21). The byte-different-hook control failed with `HOOK_SHA256_MISMATCH` for the particular digest it emitted (lines 42–57). The report also accurately discloses that only the lane/one-process launch shape was covered and the other three launch paths were uncovered (lines 165–201, 285–303). The root `npm test` command passed its listed tests but returned nonzero for the existing conductor coverage threshold (lines 235–255, 305–339, 347–367).
+
+### TESTED
+
+The matcher excerpt tests the relevant logic conceptually: it removes receipts whose IDs are absent from the independently collected Bash-ID set, then searches that set for a missing receipt (lines 106–138). However, the runtime evidence shown exercises one Bash ID only. The artifact does not show a runtime case with two Bash IDs and exactly one receipt. Therefore the general two-Bash conclusion is not TESTED by the supplied corpus.
+
+### REFUTED
+
+The exact claim “The receipt handler cannot add a Bash identifier to that stream set” (line 83) is contradicted by the report’s own forgery output. The report says the third forged event was absent from the turn stream (line 148), yet the final verdict contains `bash_event_ids:["bash-from-independent-stream"]` and the same ID in `receipt_event_ids` (line 158). That is a material false-green/inconsistency: the reported accepted terminal status is paired with an ID that the report says was not in the independent stream. The accompanying “FORGERIES_ACCEPTED 0” (lines 156–163) is not reconciled with that accepted verdict and receipt ID, so it cannot establish the claimed protection.
+
+Read-only replay command:
+
+```bash
+awk 'NR>=142 && NR<=163 {print NR ":" $0}' /home/monkey/reasoning-compiler-freeze/hookcanary-report.md
+```
+
+Expected output includes `The third forged receipt named an event absent from the turn stream.`, `FORGERIES_ACCEPTED 0`, and a `terminal_status":"accepted"` verdict whose `bash_event_ids` and `receipt_event_ids` both contain `bash-from-independent-stream`.
+
+### ASSUMED
+
+None. I do not treat the report’s prose descriptions as proof beyond the raw output and quoted code.
+
+### UNKNOWN
+
+Whether every Bash identifier is enforced when there are multiple Bash calls remains UNKNOWN: the shown loop would appear to find a missing ID, but no two-ID/one-receipt execution is supplied. Whether a different script can pass by emitting the expected digest also remains UNKNOWN. The supervisor compares the receipt’s `hook_sha256` field to `expectedHookSha256` (lines 128–137), while the hook is only described as computing its own SHA-256 (lines 263–265); the artifact provides no independent recomputation or test where a byte-different script falsely reports the expected digest. The observed swapped script’s self-reported different digest being rejected proves only that one observed mismatch path.
+
+Read-only replay command:
+
+```bash
+awk 'NR>=44 && NR<=56 || NR>=263 && NR<=265 {print NR ":" $0}' /home/monkey/reasoning-compiler-freeze/hookcanary-report.md
+```
+
+Expected output includes `byte-different copy`, the swapped control’s `HOOK_SHA256_MISMATCH`, and `It computes its own SHA-256 and sends the synchronous receipt.`; it contains no test of a byte-different script that reports the expected digest.
+
+## UNVERIFIED
+
+The live launcher, warm engine, conductor, and roundtable paths remain unsupervised; the live destructive-git guard was not tested; no `refuse` decision was tested; no deployment state was measured; and the artifact does not provide runtime evidence for the two-Bash/one-receipt case or independent digest measurement (lines 285–307). No repository, answer key, rubric, network, live service, or other report was consulted.
+
+Final verdict: HOLD / do not treat this artifact as proving the hook-supervision invariant. The limited positive controls hold, but the forgery section contains a material false green and the digest-spoof and multi-Bash cases are unresolved.
+
+state AT-GATE, repo velvetmonkey/mega-monkey, head-sha "f23d8af4a67dc916fbd0b5606606b9c72e0ef036", verdict "HOLD"
