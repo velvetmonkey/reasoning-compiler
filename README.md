@@ -1,6 +1,17 @@
 # The reasoning compiler — A1 re-registration
 
-Private research repository for plan `8fb3536a`. Keep private; publication and collaborators are Ben's decision. No experiment has run as part of this registration.
+## About this repository
+
+This repository holds stage 1 of the reasoning compiler experiment. The question was simple. Can a cold, hostile reviewer find planted gaps in a written specification when every verdict must carry a command that anyone can run again?
+
+The experiment is closed. A blind re-score credited the planted false green in 11 of 30 runs and the admitted scope gap in none. The write-up, with the design, the blind score, the results and the limits, is here:
+
+https://velvetmonkey.github.io/notes/reasoning-compiler-stage1.html
+
+The run reports, keys and logs in this repository are raw records. They are kept as they were written, including local paths and working notes. The blind re-score is on the branch `rescore1117`.
+
+
+Research repository for plan `8fb3536a`. It was private while the experiment ran and was made public after it closed. No experiment has run as part of this registration.
 
 ## Bet, claims and kill conditions
 
