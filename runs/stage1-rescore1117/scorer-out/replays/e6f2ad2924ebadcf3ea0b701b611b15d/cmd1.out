@@ -1,0 +1,5 @@
+failed HOOK_MISSING_PRE_TOOL_USE ['toolu_01PM7Sdf7WgBjzyuJbkQPZzc'] []
+accepted None ['toolu_016KVbcw5y7XseMdvJkCmJWh'] ['toolu_016KVbcw5y7XseMdvJkCmJWh']
+failed HOOK_SHA256_MISMATCH ['toolu_01BLFdogpvaJFcX51f7GDrvi'] ['toolu_01BLFdogpvaJFcX51f7GDrvi']
+not_applicable None [] []
+accepted None ['bash-from-independent-stream'] ['bash-from-independent-stream']

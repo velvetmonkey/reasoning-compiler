@@ -1,0 +1,6 @@
+1 0 failed HOOK_MISSING_PRE_TOOL_USE
+1 1 accepted None
+1 1 failed HOOK_SHA256_MISMATCH
+0 0 not_applicable None
+1 1 accepted None
+max_bash 1

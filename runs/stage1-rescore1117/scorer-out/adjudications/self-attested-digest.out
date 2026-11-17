@@ -1,0 +1,8 @@
+2:import { createHash } from 'node:crypto';
+3:import { readFile } from 'node:fs/promises';
+15:  hook_sha256: createHash('sha256').update(await readFile(scriptPath)).digest('hex'),
+---
+1:import { createHash, randomBytes, randomUUID } from 'crypto';
+85:    this.expectedHookSha256 = expectedHookSha256;
+96:    const expectedHookSha256 = createHash('sha256')
+168:          .find((receipt) => receipt.hook_sha256 !== this.expectedHookSha256);

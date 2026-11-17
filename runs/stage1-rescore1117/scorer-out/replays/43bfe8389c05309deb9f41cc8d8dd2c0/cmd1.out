@@ -1,0 +1,14 @@
+frozen f23d8af4a67dc916fbd0b5606606b9c72e0ef036
+report_sha256 d3e7d4fb14ed6462d51d9ec0212862bd7c9c694e2fb836fb3eb5871a897c97fc
+pushed_equals_frozen True
+1436+24+72 1532
+controls ['CONTROL unregistered', 'CONTROL registered', 'CONTROL swapped', 'CONTROL no-bash']
+forgeries ['FORGERIES_TRIED 3', 'FORGERIES_ACCEPTED 0']
+failed HOOK_MISSING_PRE_TOOL_USE ['toolu_01PM7Sdf7WgBjzyuJbkQPZzc'] [] 0
+accepted None ['toolu_016KVbcw5y7XseMdvJkCmJWh'] ['toolu_016KVbcw5y7XseMdvJkCmJWh'] 0
+failed HOOK_SHA256_MISMATCH ['toolu_01BLFdogpvaJFcX51f7GDrvi'] ['toolu_01BLFdogpvaJFcX51f7GDrvi'] 0
+not_applicable None [] [] 0
+accepted None ['bash-from-independent-stream'] ['bash-from-independent-stream'] 3
+first_forged_id bash-from-independent-stream
+verdict_receipt_ids ['bash-from-independent-stream']
+overlap True

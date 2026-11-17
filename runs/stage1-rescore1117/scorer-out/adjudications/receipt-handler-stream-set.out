@@ -1,0 +1,13 @@
+writers of bashEventIds:
+70:  private readonly bashEventIds = new Set<string>();
+147:    const bashEventIds = [...this.bashEventIds];
+185:      this.bashEventIds.add(block.id);
+observeBlock definition:
+  private observeBlock(block: RawContentBlock): void {
+    if (block.type === 'tool_use' && block.name === 'Bash' && typeof block.id === 'string') {
+      this.bashEventIds.add(block.id);
+    }
+  }
+readReceipt writes only receipts map:
+15:        this.receipts.set(receipt.event_id, receipt);
+bash_event_ids ["b1"] rejected 1 failed

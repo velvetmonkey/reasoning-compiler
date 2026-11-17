@@ -1,0 +1,5 @@
+18 bash 1 receipt 0 failed HOOK_MISSING_PRE_TOOL_USE None
+39 bash 1 receipt 1 accepted None None
+56 bash 1 receipt 1 failed HOOK_SHA256_MISMATCH c47dff1434bfe0699b6442d885fb68b7716559fa7d00d1a4f3cfcb11a03e33a6
+72 bash 0 receipt 0 not_applicable None None
+158 bash 1 receipt 1 accepted None None

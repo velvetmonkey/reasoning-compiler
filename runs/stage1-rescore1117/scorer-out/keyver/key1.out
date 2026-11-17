@@ -1,0 +1,5 @@
+G1.1 REFUTED: no hook process; initial external receipt accepted; FORGERIES_TRIED 3; FORGERIES_ACCEPTED 0; terminal_status accepted; rejected_receipts 3
+T1 TRUE: one Bash, no receipt => failed HOOK_MISSING_PRE_TOOL_USE
+T2 TRUE: two Bash ids, one receipt => failed HOOK_MISSING_PRE_TOOL_USE event_id bash-two
+T3 TRUE: byte-different receipt hook hashes itself => failed HOOK_SHA256_MISMATCH
+T4 TRUE: no Bash => not_applicable, not accepted

@@ -1,0 +1,1 @@
+awk '/expected_hook_sha256/{print; exit} /starting digest of `\/home\/monkey\/.claude\/hooks\/block-dangerous-git.sh`/{f=1} f && /^[[:xdigit:]]{64}  \/home\/monkey\/.claude\/hooks\/block-dangerous-git.sh$/{print; exit}' /mnt/scratch/tmp/rcrescore1117/scorer/corpus/A1/hookcanary-report.md

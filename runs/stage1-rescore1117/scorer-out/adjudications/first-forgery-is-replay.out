@@ -1,0 +1,7 @@
+/mnt/scratch/tmp/rcrescore1117/scorer/mega-monkey/packages/engine/scripts/hook-turn-forgery-control.ts:38:await send(valid);
+/mnt/scratch/tmp/rcrescore1117/scorer/mega-monkey/packages/engine/scripts/hook-turn-forgery-control.ts:41:  { ...valid },
+/mnt/scratch/tmp/rcrescore1117/scorer/mega-monkey/packages/engine/scripts/hook-turn-forgery-control.ts:51:console.log(`FORGERIES_ACCEPTED ${forged.length - verdict.rejected_receipts}`);
+/mnt/scratch/tmp/rcrescore1117/scorer/mega-monkey/packages/engine/src/claude/hook-turn-supervisor.ts:199:          || this.receipts.has(receipt.event_id)) {
+after initial external valid send, stored receipts: 1
+after FORGED 1 (duplicate of accepted), stored receipts: 1
+verdict accepted rejected 3 FORGERIES_ACCEPTED 0

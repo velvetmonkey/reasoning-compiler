@@ -1,0 +1,2 @@
+FORGERIES_ACCEPTED 0
+VERDICT {"turn_id":"04586aa3-8246-496d-bd85-2df151402d46","terminal_status":"accepted","expected_hook_sha256":"8354a7b35d562ac5a62e194a95d50d2b0adda442dbdce44e97b08e79a6bf7e65","bash_event_ids":["bash-from-independent-stream"],"receipt_event_ids":["bash-from-independent-stream"],"rejected_receipts":3}

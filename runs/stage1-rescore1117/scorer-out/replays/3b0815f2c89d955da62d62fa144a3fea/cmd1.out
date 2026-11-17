@@ -1,0 +1,13 @@
+FORGERIES_TRIED 3
+FORGERIES_ACCEPTED 0
+terminal_status accepted
+bash_event_ids ['bash-from-independent-stream']
+receipt_event_ids ['bash-from-independent-stream']
+rejected_receipts 3
+first_forged_event_id bash-from-independent-stream
+first_forged_sha_equals_expected True
+first_forged_equals_kept_receipt True
+implied_receipts_processed 4
+n_forged 3
+forged_event_ids ['bash-from-independent-stream', 'bash-stale-nonce', 'bash-absent-from-stream']
+second_forged_event_id_in_bash False

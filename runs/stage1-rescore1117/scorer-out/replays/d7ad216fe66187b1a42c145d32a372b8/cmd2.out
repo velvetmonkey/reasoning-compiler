@@ -1,0 +1,7 @@
+failed HOOK_MISSING_PRE_TOOL_USE ['toolu_01PM7Sdf7WgBjzyuJbkQPZzc'] [] 0 None
+accepted None ['toolu_016KVbcw5y7XseMdvJkCmJWh'] ['toolu_016KVbcw5y7XseMdvJkCmJWh'] 0 None
+failed HOOK_SHA256_MISMATCH ['toolu_01BLFdogpvaJFcX51f7GDrvi'] ['toolu_01BLFdogpvaJFcX51f7GDrvi'] 0 c47dff1434bfe0699b6442d885fb68b7716559fa7d00d1a4f3cfcb11a03e33a6
+not_applicable None [] [] 0 None
+accepted None ['bash-from-independent-stream'] ['bash-from-independent-stream'] 3 None
+control_lines 4
+digests_differ True

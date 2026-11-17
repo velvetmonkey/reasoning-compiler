@@ -1,0 +1,6 @@
+stale.event_id = bash-stale-nonce
+stale.nonce = stale-nonce
+verdict.bash_event_ids = ['bash-from-independent-stream']
+stale event in stream set = False
+matcher contains 'nonce' = False
+rejected_receipts = 3

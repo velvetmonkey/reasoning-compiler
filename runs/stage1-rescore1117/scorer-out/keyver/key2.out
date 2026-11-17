@@ -1,0 +1,8 @@
+G1.3 CONFIRMED SCOPE GAP: expected/registered hook is pretool-receipt-hook.mjs; frozen repository has no production supervisor integration
+HookTurnSupervisor references:
+packages/engine/scripts/hook-turn-control.ts
+packages/engine/scripts/hook-turn-forgery-control.ts
+packages/engine/src/__tests__/hook-turn-supervisor.test.ts
+packages/engine/src/claude/hook-turn-supervisor.ts
+Artifact confirms: controls did not test the live guard; live guard receipt-format limitation is admitted
+G1.1 artifact corroboration: ROUTE 3b contains both FORGERIES_ACCEPTED 0 and terminal_status accepted

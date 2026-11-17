@@ -1,0 +1,6 @@
+receipt_keys [['decision', 'event_id', 'hook_event_name', 'hook_sha256', 'nonce', 'turn_id'], ['decision', 'event_id', 'hook_event_name', 'hook_sha256', 'nonce', 'turn_id']]
+forged_keys [['decision', 'event_id', 'hook_event_name', 'hook_sha256', 'nonce', 'turn_id'], ['decision', 'event_id', 'hook_event_name', 'hook_sha256', 'nonce', 'turn_id'], ['decision', 'event_id', 'hook_event_name', 'hook_sha256', 'nonce', 'turn_id']]
+schema_equal True
+nonce_in_ts_body False
+route3b_claude False
+forgeries_accepted_line ['FORGERIES_ACCEPTED 0', 'COUNT of forged receipts tried: 3.', 'COUNT of forged receipts accepted: 0.']

@@ -1,0 +1,6 @@
+['bash-from-independent-stream', 'bash-stale-nonce', 'bash-absent-from-stream']
+['3221b1a75879f07cada307392194bbc5e8b56563dc713d4bbfff13b8213bf2b0', 'stale-nonce', '3221b1a75879f07cada307392194bbc5e8b56563dc713d4bbfff13b8213bf2b0']
+True
+accepted ['bash-from-independent-stream'] ['bash-from-independent-stream'] 3
+False
+[]

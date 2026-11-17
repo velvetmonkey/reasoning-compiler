@@ -1,0 +1,5 @@
+forged ['bash-from-independent-stream', 'bash-stale-nonce', 'bash-absent-from-stream']
+bash ['bash-from-independent-stream']
+kept ['bash-from-independent-stream']
+rejected_receipts 3
+stale_in_stream False

@@ -1,0 +1,10 @@
+forged_event_ids ['bash-from-independent-stream', 'bash-stale-nonce', 'bash-absent-from-stream']
+forged_nonces ['3221b1a75879f07cada307392194bbc5e8b56563dc713d4bbfff13b8213bf2b0', 'stale-nonce', '3221b1a75879f07cada307392194bbc5e8b56563dc713d4bbfff13b8213bf2b0']
+verdict_status accepted
+bash_event_ids ['bash-from-independent-stream']
+receipt_event_ids ['bash-from-independent-stream']
+rejected_receipts 3
+first_forged_id_in_receipts True
+stale_event_in_stream False
+matcher_contains_nonce False
+fence_has_RECEIPT_line False

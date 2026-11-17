@@ -1,0 +1,5 @@
+1 1 0 failed HOOK_MISSING_PRE_TOOL_USE 0 
+2 1 1 accepted  0 
+3 1 1 failed HOOK_SHA256_MISMATCH 0 c47dff1434bfe0699b6442d885fb68b7716559fa7d00d1a4f3cfcb11a03e33a6
+4 0 0 not_applicable  0 
+5 1 1 accepted  3 

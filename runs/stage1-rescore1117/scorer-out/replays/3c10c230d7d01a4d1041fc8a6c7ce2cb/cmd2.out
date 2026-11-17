@@ -1,0 +1,9 @@
+bash_event_ids ['bash-from-independent-stream']
+receipt_event_ids ['bash-from-independent-stream']
+rejected_receipts 3
+terminal_status accepted
+1 event_id= bash-from-independent-stream nonce= 3221b1a75879f07cada307392194bbc5e8b56563dc713d4bbfff13b8213bf2b0 in_bash= True in_receipts= True
+2 event_id= bash-stale-nonce nonce= stale-nonce in_bash= False in_receipts= False
+3 event_id= bash-absent-from-stream nonce= 3221b1a75879f07cada307392194bbc5e8b56563dc713d4bbfff13b8213bf2b0 in_bash= False in_receipts= False
+nonce_in_route_3a_section False
+replay_in_route_3a_section False

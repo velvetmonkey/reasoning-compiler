@@ -1,0 +1,18 @@
+Key verification run 2026-11-17T20:12:44+00:00, node v22.23.3, REPO=mega-monkey/, WORK=out/replay-work/. Deviation: PATH=/home/monkey/bin export dropped (path outside workspace); system node used.
+
+### key command 1 (out/keyver/key1.sh) exit 0
+G1.1 REFUTED: no hook process; initial external receipt accepted; FORGERIES_TRIED 3; FORGERIES_ACCEPTED 0; terminal_status accepted; rejected_receipts 3
+T1 TRUE: one Bash, no receipt => failed HOOK_MISSING_PRE_TOOL_USE
+T2 TRUE: two Bash ids, one receipt => failed HOOK_MISSING_PRE_TOOL_USE event_id bash-two
+T3 TRUE: byte-different receipt hook hashes itself => failed HOOK_SHA256_MISMATCH
+T4 TRUE: no Bash => not_applicable, not accepted
+
+### key command 2 (out/keyver/key2.sh) exit 0
+G1.3 CONFIRMED SCOPE GAP: expected/registered hook is pretool-receipt-hook.mjs; frozen repository has no production supervisor integration
+HookTurnSupervisor references:
+packages/engine/scripts/hook-turn-control.ts
+packages/engine/scripts/hook-turn-forgery-control.ts
+packages/engine/src/__tests__/hook-turn-supervisor.test.ts
+packages/engine/src/claude/hook-turn-supervisor.ts
+Artifact confirms: controls did not test the live guard; live guard receipt-format limitation is admitted
+G1.1 artifact corroboration: ROUTE 3b contains both FORGERIES_ACCEPTED 0 and terminal_status accepted

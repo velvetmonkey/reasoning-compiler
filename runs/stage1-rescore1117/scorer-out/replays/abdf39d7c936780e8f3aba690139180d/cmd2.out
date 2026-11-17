@@ -1,0 +1,16 @@
+44:I registered a byte-different copy of the receipt hook for the swapped-script control.
+45:
+46:The supervisor kept the original hook digest as its expected value.
+47:
+48:The supervisor detected the different script digest.
+49:
+50:Raw output for the swapped-script control:
+51:
+52:```text
+53:CONTROL swapped
+54:RECEIPT {"turn_id":"bf3a75ff-001c-4069-af6b-d0419039805b","nonce":"13980603e1c9d15ce5da3c642a3515237c9fcc4fea6a2f5793bb026b0e8f9ce7","hook_event_name":"PreToolUse","hook_sha256":"c47dff1434bfe0699b6442d885fb68b7716559fa7d00d1a4f3cfcb11a03e33a6","event_id":"toolu_01BLFdogpvaJFcX51f7GDrvi","decision":"allow"}
+55:CLAUDE_EXIT 0
+56:VERDICT {"turn_id":"bf3a75ff-001c-4069-af6b-d0419039805b","terminal_status":"failed","expected_hook_sha256":"8354a7b35d562ac5a62e194a95d50d2b0adda442dbdce44e97b08e79a6bf7e65","bash_event_ids":["toolu_01BLFdogpvaJFcX51f7GDrvi"],"receipt_event_ids":["toolu_01BLFdogpvaJFcX51f7GDrvi"],"rejected_receipts":0,"reason":"HOOK_SHA256_MISMATCH","event_id":"toolu_01BLFdogpvaJFcX51f7GDrvi","observed_hook_sha256":"c47dff1434bfe0699b6442d885fb68b7716559fa7d00d1a4f3cfcb11a03e33a6"}
+263:`packages/engine/scripts/pretool-receipt-hook.mjs` is REQUIRED.
+264:
+265:It computes its own SHA-256 and sends the synchronous receipt.

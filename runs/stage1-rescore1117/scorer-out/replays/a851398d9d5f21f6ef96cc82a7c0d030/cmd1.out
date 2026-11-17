@@ -1,0 +1,1 @@
+VERDICT {"turn_id":"8381a76b-e799-4706-973e-60e8c032ac89","terminal_status":"failed","expected_hook_sha256":"8354a7b35d562ac5a62e194a95d50d2b0adda442dbdce44e97b08e79a6bf7e65","bash_event_ids":["toolu_01PM7Sdf7WgBjzyuJbkQPZzc"],"receipt_event_ids":[],"rejected_receipts":0,"reason":"HOOK_MISSING_PRE_TOOL_USE","event_id":"toolu_01PM7Sdf7WgBjzyuJbkQPZzc"}

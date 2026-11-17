@@ -1,0 +1,4 @@
+198:          || receipt.nonce !== this.nonce
+A stale nonce, in-stream id: failed HOOK_MISSING_PRE_TOOL_USE rejected 1
+B valid nonce, absent id: accepted rejected 1
+C stale nonce + absent id: accepted rejected 1
